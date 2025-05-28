@@ -7,7 +7,7 @@ using namespace std;
 int counter = 0;            // Shared resource
 mutex counterMutex;    // Mutex to protect access
 
-void incrementCounter(const string & name) {                        
+void incrementCounter(const string & name) {
     for (int i = 0; i < 5; ++i) {
         // Lock the mutex before accessing shared resource
         counterMutex.lock();
